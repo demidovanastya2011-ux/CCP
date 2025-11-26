@@ -1,176 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ISARIC CCP ARChetype CRF Creation Guidelines</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            color: #333;
-        }
-        header {
-            background: rgb(186, 2, 37);
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-        }
-        header img {
-            position: absolute;
-            left: 20px;
-            top: 10px;
-            width: 60px;
-            height: auto;
-            cursor: pointer;
-        }
-        header h1 {
-            color: #fff;
-            margin: 0;
-            font-size: 2em;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISARIC CCP ARChetype CRF Creation Guidelines</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
 
-        a:link, a:visited {
- 
-  text-decoration: none;
-  cursor: auto;
-}
-             .container {
-            max-width: 1000px;
-            margin: 10px auto;
-            padding: 16px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            
-        }
-        .floating-box {
-            width: 200px;
-            padding: 10px;
-            background: rgb(186, 2, 37);
-            color: #fff;
-            float: left;
-            margin: 10px 20px 10px 0;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        h2 {
-            color: rgb(186, 2, 37);
-        }
-.bullet-list {
-    margin-top: 6px;
-    padding-left: 16px;
-}
+    header {
+      background: rgb(186, 2, 37);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      position: relative;
+    }
 
-.bullet-list li {
-    margin-bottom: 2px;
-    line-height: 1.3;
-    list-style: none; 
-    position: relative;
-    padding-left: 12px;
-}
+    header img {
+      position: absolute;
+      left: 20px;
+      top: 10px;
+      width: 60px;
+      height: auto;
+      cursor: pointer;
+    }
 
-.bullet-list li::before {
-    content: "•"; 
-    color: #BA0225; /* ISARIC red */
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-  /* NEW TABLE STYLES */
-.table-wrapper {
-    overflow-x: auto; 
-    overflow-y: visible;
-    margin: 10px 0;
-}
-.table-crf {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.9em;
-    line-height: 1.0;
-}
+    header h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 2em;
+    }
 
-.table-crf th, 
-.table-crf td {
-    padding: 6px 8px;
-    border: 1px solid #E0E0E0;
-    vertical-align: top;
-}
+    a:link,
+    a:visited {
 
-.table-crf thead th {
-    background: #fafafa;
-    font-weight: bold;
-    text-align: left;
-    color: #333;
-    position: sticky;
-    top: 0;
-    z-index: 20;
-}
+      text-decoration: none;
+      cursor: auto;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 10px auto;
+      padding: 16px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .floating-box {
+      width: 200px;
+      padding: 10px;
+      background: rgb(186, 2, 37);
+      color: #fff;
+      float: left;
+      margin: 10px 20px 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+      color: rgb(186, 2, 37);
+    }
+
+    .bullet-list {
+      margin-top: 6px;
+      padding-left: 16px;
+    }
+
+    .bullet-list li {
+      margin-bottom: 2px;
+      line-height: 1.3;
+      list-style: none;
+      position: relative;
+      padding-left: 12px;
+    }
+
+    .bullet-list li::before {
+      content: "•";
+      color: #BA0225; /* ISARIC red */
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    /* NEW TABLE STYLES */
+    .table-wrapper {
+      overflow-x: auto;
+      overflow-y: visible;
+      margin: 10px 0;
+    }
+
+    .table-crf {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9em;
+      line-height: 1.0;
+    }
+
+    .table-crf th,
+    .table-crf td {
+      padding: 6px 8px;
+      border: 1px solid #E0E0E0;
+      vertical-align: top;
+    }
+
+    .table-crf thead th {
+      background: #fafafa;
+      font-weight: bold;
+      text-align: left;
+      color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
 
 
 
-/* alternating row stripes */
-.table-crf tbody tr:nth-child(even) {
-    background: #fcfcfc;
-}
+    /* alternating row stripes */
+    .table-crf tbody tr:nth-child(even) {
+      background: #fcfcfc;
+    }
 
-/* category column */
-.table-crf td.category {
-    background: #f2f2f2;
-    font-weight: 600;
-    width: 22%;
-}
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            padding: 20px;
-            border-left: 4px solid rgb(186, 2, 37);
-            margin-left: 20px;
-        }
-        .timeline-item {
-            background: #f2f2f2;
-            padding: 15px;
-            border-radius: 6px;
-            position: relative;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .timeline-item::before {
-            content: "";
-            position: absolute;
-            left: -32px;
-            top: 15px;
-            width: 16px;
-            height: 16px;
-            background: rgb(186, 2, 2);
-            border-radius: 50%;
-        }
-        .timeline-item h3 {
-            margin: 0;
-            font-size: 1.2em;
-        }
-        .timeline-item p {
-            margin: 5px 0 0;
-            font-size: 0.95em;
-        }
-        .footer {
-            background: rgb(186, 2, 37);
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            margin-top: 20px;
-        }
-           @media screen and (max-width: 600px) {
+    /* category column */
+    .table-crf td.category {
+      background: #f2f2f2;
+      font-weight: 600;
+      width: 22%;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      border-left: 4px solid rgb(186, 2, 37);
+      margin-left: 20px;
+    }
+
+    .timeline-item {
+      background: #f2f2f2;
+      padding: 15px;
+      border-radius: 6px;
+      position: relative;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -32px;
+      top: 15px;
+      width: 16px;
+      height: 16px;
+      background: rgb(186, 2, 2);
+      border-radius: 50%;
+    }
+
+    .timeline-item h3 {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .timeline-item p {
+      margin: 5px 0 0;
+      font-size: 0.95em;
+    }
+
+    .footer {
+      background: rgb(186, 2, 37);
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+
+    @media screen and (max-width: 600px) {
       .floating-box {
         float: none;
         width: 100%;
         margin: 10px 0;
       }
     }
+
     .arc-container {
       display: flex;
       flex-wrap: wrap;
@@ -193,7 +211,7 @@
     }
 
     .arc-instructions {
-      background: #f7f4f4; 
+      background: #f7f4f4;
     }
 
     .arc-column h3 {
@@ -204,1049 +222,716 @@
     .arc-column p {
       margin: 0 0 0.5rem 0;
     }
+
     .arc-wrapper {
-  margin-top: 40px;
-}
+      margin-top: 40px;
+    }
+
     /* ===== Accordion styling for phases ===== */
 
-/* Main accordion container (<details>) */
-.phase-accordion {
-  margin: 25px 0;
-  border-radius: 8px;
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  padding: 0;
-  overflow: hidden; /* ensures rounded corners look clean */
-}
+    /* Main accordion container (<details>) */
+    .phase-accordion {
+      margin: 25px 0;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid #e0e0e0;
+      padding: 0;
+      overflow: hidden; /* ensures rounded corners look clean */
+    }
 
-/* Hide default summary triangle */
-.phase-accordion > summary::-webkit-details-marker {
-  display: none;
-}
+    /* Hide default summary triangle */
+    .phase-accordion>summary::-webkit-details-marker {
+      display: none;
+    }
 
-/* Styling the clickable phase header */
-.phase-accordion > summary.phase-title {
-  cursor: pointer;              /* makes it look clickable */
-  padding: 14px 18px;
-  font-size: 1.4em;             /* larger heading size */
-  font-weight: bold;
-  color: rgb(186, 2, 37);       /* ISARIC red */
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid #eee;
-  background: #fafafa;          /* subtle header background */
-}
+    /* Styling the clickable phase header */
+    .phase-accordion>summary.phase-title {
+      cursor: pointer;  /* makes it look clickable */
+      padding: 14px 18px;
+      font-size: 1.4em; /* larger heading size */
+      font-weight: bold;
+      color: rgb(186, 2, 37);/* ISARIC red */
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      background: #fafafa; /* subtle header background */
+    }
 
-/* Arrow icon (down arrow by default) */
-.phase-accordion > summary.phase-title::after {
-  content: "▾";                 /* arrow icon */
-  margin-left: auto;            /* push arrow to right */
-  font-size: 0.9em;
-  transition: transform 0.2s ease;
-}
+    /* Arrow icon (down arrow by default) */
+    .phase-accordion>summary.phase-title::after {
+      content: "▾";/* arrow icon */
+      margin-left: auto; /* push arrow to right */
+      font-size: 0.9em;
+      transition: transform 0.2s ease;
+    }
 
-/* Rotate arrow when accordion is open */
-.phase-accordion[open] > summary.phase-title::after {
-  transform: rotate(180deg);
-}
+    /* Rotate arrow when accordion is open */
+    .phase-accordion[open]>summary.phase-title::after {
+      transform: rotate(180deg);
+    }
 
-/* Container for phase content (timeline, output, etc.) */
-.phase-accordion-content {
-  padding: 16px 20px 20px 20px;
-}
-
-    </style>
-     <script>
-        function loadTime() {
-            document.getElementById("demo").innerHTML = document.lastModified;
-        }
-    </script>
+    /* Container for phase content (timeline, output, etc.) */
+    .phase-accordion-content {
+      padding: 16px 20px 20px 20px;
+    }
+  </style>
+  <script>
+    function loadTime() {
+      document.getElementById("demo").innerHTML = document.lastModified;
+    }
+  </script>
 </head>
 <body onload="loadTime();">
 
-    <header>
-        <!-- Clickable Logo -->
-        <a href="https://www.isaric.org" target="_blank">
-            <img src="assets/ISARIC_red-logo.png" alt="ISARIC Logo">
-        </a>
-        <h1 style="color:White">ISARIC CCP ARChetype Case Report Form </h1>
-    </header>
- <div class="container">
+  <header>
+    <!-- Clickable Logo -->
+    <a href="https://www.isaric.org" target="_blank">
+      <img src="assets/ISARIC_red-logo.png" alt="ISARIC Logo">
+    </a>
+    <h1 style="color:White">ISARIC CCP ARChetype Case Report Form </h1>
+  </header>
+  <div class="container">
 
-         <section id="ARChetype-crfs">
-       
-            <p> ARChetype CRFs are standardized, disease or syndrom-specific CRFs developed by ISARIC. They are a key component of the <a href="https://isaric.org/resources/clinical-characterisation-protocol/"> 
-                ISARIC-WHO Clinical Characterisation Protocol (CCP) </a> framework, which aims to enhance global preparedness and response to infectious disease outbreaks. 
-                These CRFs are designed to address key clinical research questions, facilitating the collection of high-quality, harmonized data across 
-                different regions and healthcare settings. By focusing on priority emerging and infectious diseases—such as Mpox, Dengue, COVID-19, and H5Nx—and related 
-                syndromes, ARChetype CRFs support rapid, coordinated research efforts that can inform patient care and public health strategies. </p>
+    <section id="ARChetype-crfs">
 
-             <p>  ARChetype CRFs are designed to collect data on community or hospitalised patients in order to address key clinical research questions and 
-                 inform better case management, contribute to the design of clinical trials, and guide public health interventions. <p>They aim to:
-</p>
-                 <ul class="bullet-list">
-                    <li>Characterise the clinical epidemiology of cases, including the presenting signs and symptoms, disease progression, and clinical outcomes;
-                    <li>Enable comparative clinical epidemiology between diseases, populations, and/or geographies;</li>
-                    <li>Identify risk factors associated with disease presentation, progression and outcomes;</li>
-                    <li>Describe the clinical management of patients, including any differences in approaches to management;</li>
-                    <li>Describe diagnostic approaches and results; </li>
-                     </ul>
+      <p> ARChetype CRFs are standardized, disease or syndrom-specific CRFs developed by ISARIC. They are a key
+        component of the <a href="https://isaric.org/resources/clinical-characterisation-protocol/">
+          ISARIC-WHO Clinical Characterisation Protocol (CCP) </a> framework, which aims to enhance global preparedness
+        and response to infectious disease outbreaks.
+        These CRFs are designed to address key clinical research questions, facilitating the collection of high-quality,
+        harmonized data across
+        different regions and healthcare settings. By focusing on priority emerging and infectious diseases—such as
+        Mpox, Dengue, COVID-19, and H5Nx—and related
+        syndromes, ARChetype CRFs support rapid, coordinated research efforts that can inform patient care and public
+        health strategies. </p>
+
+      <p> ARChetype CRFs are designed to collect data on community or hospitalised patients in order to address key
+        clinical research questions and
+        inform better case management, contribute to the design of clinical trials, and guide public health
+        interventions.
+      <p>They aim to:
+      </p>
+      <ul class="bullet-list">
+        <li>Characterise the clinical epidemiology of cases, including the presenting signs and symptoms, disease
+          progression, and clinical outcomes;
+        <li>Enable comparative clinical epidemiology between diseases, populations, and/or geographies;</li>
+        <li>Identify risk factors associated with disease presentation, progression and outcomes;</li>
+        <li>Describe the clinical management of patients, including any differences in approaches to management;</li>
+        <li>Describe diagnostic approaches and results; </li>
+      </ul>
       <h1>Existing and in-development ARChetype CRFs</h1>
-    </caption>                  
-<div class="table-wrapper">
-  <table class="table-crf">
-    <thead>
-      <tr>
-        <th>ARChetype CRFs<br><small>(Available &amp; in development)</small></th>
-        <th>Syndromic</th>
-        <th>Disease Specific</th>
-      </tr>
-    </thead>
+      </caption>
+      <div class="table-wrapper">
+        <table class="table-crf">
+          <thead>
+            <tr>
+              <th>ARChetype CRFs<br><small>(Available &amp; in development)</small></th>
+              <th>Syndromic</th>
+              <th>Disease Specific</th>
+            </tr>
+          </thead>
 
-    <tbody>
-      <tr>
-        <td class="category">Respiratory Infections</td>
-        <td>
-          <strong>ARI Syndrome</strong>
-          <ul class="bullet-list">
-            <li>
-              <a href="https://bridge.isaric.org/main/?param=ARChetype%20Syndromic%20CRF_ARI">
-                Hospitalised Population
-              </a>
-            </li>
-            <li>Pregnant Women and Children module (<i>under development</i>)</li>
-          </ul>
-        </td>
-        <td>
-          <strong>Covid-19</strong>
-          <ul class="bullet-list">
-            <li>
-              <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_Covid">
-                Hospitalised Population
-              </a>
-            </li>
-          </ul>
+          <tbody>
+            <tr>
+              <td class="category">Respiratory Infections</td>
+              <td>
+                <strong>ARI Syndrome</strong>
+                <ul class="bullet-list">
+                  <li>
+                    <a href="https://bridge.isaric.org/main/?param=ARChetype%20Syndromic%20CRF_ARI">
+                      Hospitalised Population
+                    </a>
+                  </li>
+                  <li>Pregnant Women and Children module (<i>under development</i>)</li>
+                </ul>
+              </td>
+              <td>
+                <strong>Covid-19</strong>
+                <ul class="bullet-list">
+                  <li>
+                    <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_Covid">
+                      Hospitalised Population
+                    </a>
+                  </li>
+                </ul>
 
-          <strong>Influenza (H5Nx)</strong>
-          <ul class="bullet-list">
-            <li>
-              <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_H5Nx">
-                Hospitalised Population
-              </a>
-            </li>
-          </ul>
-        </td>
-      </tr>
+                <strong>Influenza (H5Nx)</strong>
+                <ul class="bullet-list">
+                  <li>
+                    <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_H5Nx">
+                      Hospitalised Population
+                    </a>
+                  </li>
+                </ul>
+              </td>
+            </tr>
 
-      <tr>
-        <td class="category">Haemorrhagic Febrile Infections (viral)</td>
-        <td>
-          <strong>Viral Haemorrhagic Fever (VHF)</strong>
-          <ul class="bullet-list">
-            <li>Hospitalised Population (<i>under development</i>)</li>
-          </ul>
-        </td>
-        <td>
-          <strong>Dengue</strong>
-          <ul class="bullet-list">
-            <li>
-              <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_Dengue">
-                Hospitalised Population
-              </a>
-            </li>
-          </ul>
+            <tr>
+              <td class="category">Haemorrhagic Febrile Infections (viral)</td>
+              <td>
+                <strong>Viral Haemorrhagic Fever (VHF)</strong>
+                <ul class="bullet-list">
+                  <li>Hospitalised Population (<i>under development</i>)</li>
+                </ul>
+              </td>
+              <td>
+                <strong>Dengue</strong>
+                <ul class="bullet-list">
+                  <li>
+                    <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_Dengue">
+                      Hospitalised Population
+                    </a>
+                  </li>
+                </ul>
 
-          <strong>Yellow Fever</strong>
-          <ul class="bullet-list">
-            <li>Hospitalised Population (<i>under development</i>)</li>
-          </ul>
-        </td>
-      </tr>
+                <strong>Yellow Fever</strong>
+                <ul class="bullet-list">
+                  <li>Hospitalised Population (<i>under development</i>)</li>
+                </ul>
+              </td>
+            </tr>
 
-      <tr>
-        <td class="category">Arboviral Infections</td>
-        <td>
-          <strong>Arbovirus</strong>
-          <ul class="bullet-list">
-            <li>Community patients (<i>under development</i>)</li>
-          </ul>
-        </td>
-        <td>
-          <strong>Oropouche</strong>
-          <ul class="bullet-list">
-            <li>Hospitalised Population (<i>under development</i>)</li>
-            <li>Pregnant Women and Children module (<i>under development</i>)</li>
-          </ul>
+            <tr>
+              <td class="category">Arboviral Infections</td>
+              <td>
+                <strong>Arbovirus</strong>
+                <ul class="bullet-list">
+                  <li>Community patients (<i>under development</i>)</li>
+                </ul>
+              </td>
+              <td>
+                <strong>Oropouche</strong>
+                <ul class="bullet-list">
+                  <li>Hospitalised Population (<i>under development</i>)</li>
+                  <li>Pregnant Women and Children module (<i>under development</i>)</li>
+                </ul>
 
-          <strong>Chikungunya</strong>
-          <ul class="bullet-list">
-            <li>Hospitalised Population (<i>under development</i>)</li>
-          </ul>
-        </td>
-      </tr>
+                <strong>Chikungunya</strong>
+                <ul class="bullet-list">
+                  <li>Hospitalised Population (<i>under development</i>)</li>
+                </ul>
+              </td>
+            </tr>
 
-      <tr>
-        <td class="category">Brain Infections</td>
-        <td>
-          <strong>Encephalitis</strong>
-          <ul class="bullet-list">
-            <li>Hospitalised Population (<i>under development</i>)</li>
-          </ul>
-        </td>
-        <td></td>
-      </tr>
+            <tr>
+              <td class="category">Brain Infections</td>
+              <td>
+                <strong>Encephalitis</strong>
+                <ul class="bullet-list">
+                  <li>Hospitalised Population (<i>under development</i>)</li>
+                </ul>
+              </td>
+              <td></td>
+            </tr>
 
-      <tr>
-        <td class="category">Mucocutaneous Infections</td>
-        <td></td>
-        <td>
-          <strong>Mpox</strong>
-          <ul class="bullet-list">
-            <li>
-              <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_Mpox">
-                Hospitalised Population
-              </a>
-            </li>
-            <li>Pregnant Women and Children module (<i>under development</i>)</li>
-          </ul>
-        </td>
-      </tr>
+            <tr>
+              <td class="category">Mucocutaneous Infections</td>
+              <td></td>
+              <td>
+                <strong>Mpox</strong>
+                <ul class="bullet-list">
+                  <li>
+                    <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_Mpox">
+                      Hospitalised Population
+                    </a>
+                  </li>
+                  <li>Pregnant Women and Children module (<i>under development</i>)</li>
+                </ul>
+              </td>
+            </tr>
 
-      <tr>
-        <td class="category">Sexually Transmitted Infections</td>
-        <td>
-          <strong>Sexually Transmitted Infections</strong> (<i>under development</i>)
-        </td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+            <tr>
+              <td class="category">Sexually Transmitted Infections</td>
+              <td>
+                <strong>Sexually Transmitted Infections</strong> (<i>under development</i>)
+              </td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-
-  <!-- comment 
-  <table>
-    <div class="table-wrapper">
-<table class="table-crf">
-    <thead>
-      <tr>
-        <th> ARChetype CRFs <br>  (Available and <span class="dark-grey"> under creation </span> )</th>
-        <th>Syndromic</th>
-        <th>Disease Specific</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Respiratory Infections</strong></td>
-        <td>
-          <strong>ARI Syndrome</strong> – Hospitalised Population <a href="https://bridge.isaric.org/main/?param=ARChetype%20Syndromic%20CRF_ARI " class="red-button" title="CRF link">📄</a> <br> 
-         <span class="dark-grey"> + Pregnant Women and Children module</span> 
-          
-        </td>
-        <td>
-          <strong>Covid</strong> – Hospitalised patients <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_Covid" class="red-button" title="CRF link">📄 </a> <br> 
-          <strong>H5Nx</strong> – Hospitalised patients <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_H5Nx" class="red-button" title="CRF link">📄  </a> 
-        </td>
-      </tr>
-      <tr>
-        <td> <strong>Haemorrhagic Febrile Infections (viral)</strong></td>
-        <td>
-          <span class="dark-grey"> <strong>Viral Haemorrhagic Fever (VHF)</strong> – Hospitalised Population </span>
-        </td>
-        <td>
-          <strong>Dengue</strong> – Hospitalised patients <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_Dengue" class="red-button" title="CRF link">📄  </a> <br> 
-         <span class="dark-grey"> <strong>Yellow Fever</strong> – Hospitalised patients </span>
-        </td>
-      </tr>
-      <tr>
-        <td><strong>Arboviral Infections</strong></td>
-        <td>
-         <span class="dark-grey"> <strong>Arbovirus</strong> – Community patients</span>
-        </td>
-        <td>
-           <span class="dark-grey">  <strong>Oropouche</strong> – Hospitalised patients<br>
-         + Pregnant Women and Children module</span>
-            <span class="dark-grey"> <strong>Chikungunya</strong> – Hospitalised patients</span>
-      
-        </td>
-      </tr>
-      <tr>
-        <td><strong>Brain Infections</strong></td>
-        <td>
-         <span class="dark-grey">  <strong>Encephalitis</strong> – Hospitalised Population </span>
-        </td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><strong>Mucocutaneous Infections</strong></td>
-        <td>
-         
-           </td>
-        <td>
-          <strong>Mpox</strong> – Hospitalised Population <a href="https://bridge.isaric.org/main?param=ARChetype%20Disease%20CRF_Mpox" class="red-button" title="CRF link">📄</a> <br>  
-             <span class="dark-grey"> + Pregnant Women and Children module</span>
-        </td>
-      </tr>
-          <tr>
-        <td><strong>Sexual Transmitted Infections</strong></td>
-        <td>
-         <span class="dark-grey">  <strong>Sexual Transmitted Infections</strong> </span>
-        </td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
--->
-  
-
-    <p> For instructions, see <a href="https://isaricresearch.github.io/Training/bridge_template_link.html">our guide to using ISARIC ARChetype CRFs in BRIDGE</a>.</p>
-           <p>   ISARIC can host and manage your data on the ISARIC REDCap system, which offers standardized, pre-built databases aligned with all ARChetype CRFs. Contact us at <a href="mailto:data@isaric.org">data@isaric.org</a>.</p>
+      <p> For instructions, see <a href="https://isaricresearch.github.io/Training/bridge_template_link.html">our guide
+          to using ISARIC ARChetype CRFs in BRIDGE</a>.</p>
+      <p> ISARIC can host and manage your data on the ISARIC REDCap system, which offers standardized, pre-built
+        databases aligned with all ARChetype CRFs. Contact us at <a href="mailto:data@isaric.org">data@isaric.org</a>.
+      </p>
 
     </section>
 
 
-<h1> Creation Guidelines </h1>
+    <h1> Creation Guidelines </h1>
 
-            <h2>Background</h2>
-            <p> The ISARIC-WHO Clinical Characterisation Protocol (CCP) framework is a global, inclusive initiative offering a comprehensive approach for the rapid and standardised 
-                characterisation of (re)emerging infectious diseases. Within this framework, ISARIC supports researchers by providing a suite of standardised tools, including protocols, 
-                ARChetype case report forms (CRFs), and a CRF generator (<a href="https://bridge.isaric.org/">  BRIDGE </a>) that allows forms to be tailored to local 
-                needs while ensuring consistent data collection. These tools utilise uniform questions, choices, and terminology, ensuring machine-readable, high-quality data across studies.
-                Moreover,<a href="https://isaric.org/resources/data/"> ISARIC Clinical Epidemiology Platform </a> offers resources for efficient data capture and management and
-                has developed an automated pipeline that can generate dashboards and results, aiding in the analysis of data and dissemination of evidence. </p>
-                <p>Central coordination by ISARIC promotes streamlined communication and collaboration among researchers, enhancing the efficiency and effectiveness of research efforts.
-                Researchers also benefit from the experience and expertise of a global network of ISARIC collaborators. This network facilitates coordinated research efforts and enhances
-                the collective response to infectious disease outbreaks.</p>
+    <h2>Background</h2>
+    <p> The ISARIC-WHO Clinical Characterisation Protocol (CCP) framework is a global, inclusive initiative offering a
+      comprehensive approach for the rapid and standardised
+      characterisation of (re)emerging infectious diseases. Within this framework, ISARIC supports researchers by
+      providing a suite of standardised tools, including protocols,
+      ARChetype case report forms (CRFs), and a CRF generator (<a href="https://bridge.isaric.org/"> BRIDGE </a>) that
+      allows forms to be tailored to local
+      needs while ensuring consistent data collection. These tools utilise uniform questions, choices, and terminology,
+      ensuring machine-readable, high-quality data across studies.
+      Moreover,<a href="https://isaric.org/resources/data/"> ISARIC Clinical Epidemiology Platform </a> offers resources
+      for efficient data capture and management and
+      has developed an automated pipeline that can generate dashboards and results, aiding in the analysis of data and
+      dissemination of evidence. </p>
+    <p>Central coordination by ISARIC promotes streamlined communication and collaboration among researchers, enhancing
+      the efficiency and effectiveness of research efforts.
+      Researchers also benefit from the experience and expertise of a global network of ISARIC collaborators. This
+      network facilitates coordinated research efforts and enhances
+      the collective response to infectious disease outbreaks.</p>
 
-            
-        </section>
+    <section id="objectives">
+      <h2>CRF Creation Methodology</h2>
+      <p>
+        The ISARIC’s methodology for developing archetype CCP CRFs, emphasises essential stages from initial
+        identification of the need, through to final release and establishment of
+        ongoing feedback mechanisms. </p>
+      <p> <i> Please note that the guidelines will be adapted to reflect the context of the epidemic and disease.</i>
+      </p>
+      <p> <i> If you have any modifications to suggest for an existing CRF, or would like to know more about a CRF under
+          development, please contact us at <a href="mailto:data@isaric.org">data@isaric.org</a>.</i> </p>
 
-        <section id="objectives">
-            <h2>CRF Creation Methodology</h2>
-            <p>
-                The ISARIC’s methodology for developing archetype CCP CRFs, emphasises essential stages from initial identification of the need, through to final release and establishment of 
-                ongoing feedback mechanisms. </p>
-               <p> <i> Please note that the guidelines will be adapted to reflect the context of the epidemic and disease.</i> </p>
-               <p> <i> If you have any modifications to suggest for an existing CRF, or would like to know more about a CRF under development, please contact us at  <a href="mailto:data@isaric.org">data@isaric.org</a>.</i> </p>
-            
-        </section>
+    </section>
 
-        <section id="process">
-                    
+    <section id="process">
 
+      <!-- ===== PHASE 1 – with accordion ===== -->
 
-           </section>
-
-<section id="process">
-
-    <!-- ===== PHASE 1 – with accordion ===== -->
-
-    <details class="phase-accordion" open>
+      <details class="phase-accordion" open>
         <!-- Clickable phase header -->
         <summary class="phase-title">Phase 1. Initiation and Endorsement</summary>
 
         <!-- Content shown when accordion is open -->
         <div class="phase-accordion-content">
 
-            <!-- Vertical timeline for Phase 1 -->
-            <div class="timeline">
+          <!-- Vertical timeline for Phase 1 -->
+          <div class="timeline">
 
-                <div class="timeline-item">
-                    <h3>1. Identify the Need</h3>
-                    <p>
-                        Any ISARIC staff or research partner may propose the development of a new archetype CRF.
-                        The justification, specific requirements, and objectives of the CRF can be proposed to the
-                        ISARIC CCP team at
-                        <a href="mailto:data@isaric.org">data@isaric.org</a>.
-                    </p>
-                </div>
+            <div class="timeline-item">
+              <h3>1. Identify the Need</h3>
+              <p>
+                Any ISARIC staff or research partner may propose the development of a new archetype CRF.
+                The justification, specific requirements, and objectives of the CRF can be proposed to the
+                ISARIC CCP team at
+                <a href="mailto:data@isaric.org">data@isaric.org</a>.
+              </p>
+            </div>
 
-                <div class="timeline-item">
-                    <h3>2. Initial call with CCP coordinator</h3>
-                    <p>
-                        The CCP Coordinator will hold an initial call with the CRF Initiator to discuss the proposed CRF,
-                        methodology, timelines, available ISARIC tools (e.g. BRIDGE, CRF library), and the experts who may
-                        need to be involved. The Coordinator will also advise on the information required for the endorsement
-                        process.
-                    </p>
-                </div>
+            <div class="timeline-item">
+              <h3>2. Initial call with CCP coordinator</h3>
+              <p>
+                The CCP Coordinator will hold an initial call with the CRF Initiator to discuss the proposed CRF,
+                methodology, timelines, available ISARIC tools (e.g. BRIDGE, CRF library), and the experts who may
+                need to be involved. The Coordinator will also advise on the information required for the endorsement
+                process.
+              </p>
+            </div>
 
-                <div class="timeline-item">
-                    <h3>3. Endorsement of Action</h3>
-                    <p>
-                        Where the topic is outside of the scope of ISARIC’s activities, the CCP Coordinator will liaise with
-                        the ISARIC ARChetype CRFs Approvers Committee to obtain a decision on endorsement and progression of
-                        CRF development. They will consider:
-                        <br>(a) the public health impact of the disease/syndrome;
-                        <br>(b) existing research efforts to address the objectives proposed;
-                        <br>(c) engagement of appropriate stakeholders;
-                        <br>(d) ISARIC’s ability to add unique value to global evidence generation efforts through development
-                        of the CRF.
-                    </p>
-                    <p><i>
-                        Note: activities of phases 2–3 below may be initiated in parallel to the endorsement process
-                        to speed up the process in the event of an active outbreak.
-                    </i></p>
-                </div>
+            <div class="timeline-item">
+              <h3>3. Endorsement of Action</h3>
+              <p>
+                Where the topic is outside of the scope of ISARIC’s activities, the CCP Coordinator will liaise with
+                the ISARIC ARChetype CRFs Approvers Committee to obtain a decision on endorsement and progression of
+                CRF development. They will consider:
+                <br>(a) the public health impact of the disease/syndrome;
+                <br>(b) existing research efforts to address the objectives proposed;
+                <br>(c) engagement of appropriate stakeholders;
+                <br>(d) ISARIC’s ability to add unique value to global evidence generation efforts through development
+                of the CRF.
+              </p>
+              <p><i>
+                  Note: activities of phases 2–3 below may be initiated in parallel to the endorsement process
+                  to speed up the process in the event of an active outbreak.
+                </i></p>
+            </div>
 
-            </div> <!-- end .timeline -->
+          </div> <!-- end .timeline -->
 
-            <!-- Output of Phase 1 -->
-            <p class="phase-summary">
-                <strong>Output of Phase 1:</strong> Decision to proceed (or not) with CRF development.
-            </p>
+          <!-- Output of Phase 1 -->
+          <p class="phase-summary">
+            <strong>Output of Phase 1:</strong> Decision to proceed (or not) with CRF development.
+          </p>
 
         </div> <!-- end .phase-accordion-content -->
-    </details>
-    <!-- ===== PHASE 2 – Governance and Expert Engagement ===== -->
-<details class="phase-accordion">
-  <!-- Clickable phase header -->
-  <summary class="phase-title">Phase 2. Governance and Expert Engagement</summary>
-
-  <!-- Content visible when accordion is open -->
-  <div class="phase-accordion-content">
-
-    <!-- Vertical timeline for Phase 2 -->
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <h3>1. Roles, Responsibilities and Expert Identification</h3>
-
-        <p><strong>CRF Initiator:</strong><br>
-          Responsible for drafting and developing the CRF, conducting the literature review,
-          identifying and engaging relevant experts, and establishing a Steering Committee
-          from among the expert reviewers.
-        </p>
-
-        <p><strong>CCP Coordinator:</strong><br>
-          Oversees the CRF creation process, ensures that timelines are met, supports
-          methodological decisions, and connects the Initiator with appropriate experts
-          and stakeholders.
-        </p>
-
-        <p><strong>Expert Reviewers:</strong><br>
-          Subject matter experts, partners in affected regions, researchers with relevant
-          publications, clinicians with patient-management experience, data managers,
-          global health actors, and regulatory bodies who provide technical and contextual input
-          to inform the CRF.
-        </p>
-
-        <p><strong>Steering Committee:</strong><br>
-          A subset of expert reviewers who review early drafts of the CRF, provide structured
-          feedback, and advise on variable inclusion, removal, and refinement.
-        </p>
-
-        <p><strong>ISARIC ARChetype CRFs Approvals Committee:</strong><br>
-          Provides final approval of the CRF and offers high-level feedback to ensure alignment
-          with ISARIC standards and broader global research priorities.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>2. Review Relevant Literature and Existing CRFs</h3>
-        <p>
-          The CRF Initiator reviews existing literature, clinical trials, guidelines, and published CRFs
-          related to the disease.
-        </p>
-        <p>
-          The Initiator may also contact expert reviewers to request CRFs they have used previously in
-          similar clinical or research contexts.
-        </p>
-        <p>
-          This evidence base informs variable selection, and the overall scope and structure of the CRF.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>3. WHO Consultation</h3>
-        <p>
-          The CCP Coordinator or their delegate will contact WHO to obtain a copy of any related WHO CRFs,
-          then discuss how the CRF and research questions can support WHO’s related initiatives and what
-          parties should be involved in its development. WHO feedback will be incorporated as much as
-          possible by iteration of the required steps above or below.
-        </p>
-      </div>
-
-    </div> <!-- end .timeline -->
-
-    <!-- Output of Phase 2 -->
-    <p class="phase-summary">
-      <strong>Output of Phase 2:</strong>
-      List of expert reviewers and stakeholders and an evidence base to inform CRF design.
-    </p>
-
-  </div> <!-- end .phase-accordion-content -->
-</details>
-
-
-
-<!-- ===== PHASE 3 – Research Framing and Drafting ===== -->
-<details class="phase-accordion">
-  <summary class="phase-title">Phase 3. Research Framing and Drafting</summary>
-
-  <div class="phase-accordion-content">
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <h3>1. Framing Research Questions and CRF Content</h3>
-        <p>
-          Working with the Steering Committee, the CRF Initiator will define the key research questions
-          to be addressed by the CRF.<br>
-          Based on these questions, the Initiator will map the relevant variables needed to capture
-          essential epidemiological, clinical, laboratory, and outcome data.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>2. Create First Draft CRF</h3>
-        <p>
-          Using ISARIC BioResearch Integrated Data Tool Generator
-          (<a href="https://bridge.isaric.org/">BRIDGE</a>), the Initiator will develop an initial
-          version of the CRF that:
-        </p>
-        <ul>
-          <li>incorporates all mapped data points;</li>
-          <li>uses standardised variables available in the ISARIC Analysis and Research Compendium
-            (<a href="https://github.com/ISARICResearch/ARC">ARC</a>);</li>
-          <li>drafts new variables where no suitable ARC structures exist.</li>
-        </ul>
-        <p>
-          This first draft will form the basis for subsequent expert review and refinement.
-        </p>
-      </div>
-
-    </div> <!-- end .timeline -->
-
-    <p class="phase-summary">
-      <strong>Output of Phase 3:</strong>
-      First draft of the CRF in a Word document generated from BRIDGE.
-    </p>
-
-  </div>
-</details>
-
-
-
-<!-- ===== PHASE 4 – Expert Review ===== -->
-<details class="phase-accordion">
-  <summary class="phase-title">Phase 4. Expert Review</summary>
-
-  <div class="phase-accordion-content">
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <h3>1. Steering Committee Review of First Draft</h3>
-        <p>
-          The first draft CRF will be shared with the Steering Committee via a shared document.
-          Comments and edits will be collected during a review period defined by the Initiator,
-          relative to the urgency of the need for the CRF.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>2. Consider disease/syndromic relevance to CEPI</h3>
-        <p>
-          If within CEPI's scope of interest, the CCP Coordinator or their delegate will share a copy
-          of the CRF to request review and the addition of any variables that are valuable to CEPI's
-          activities.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>3. Wider Expert Community Review of Revised Draft</h3>
-        <p>
-          Following incorporation of Steering Committee (and CEPI, where relevant) feedback, the revised
-          draft CRF will be shared with the wider expert community. Expert reviewers will be invited to
-          provide additional comments to ensure the CRF is comprehensive, feasible and aligned with
-          current practice. All reviewers will be invited to add their names to the reviewer list on the CRF for attribution of input.All reviewers will be invited to add their names to the reviewer list on the CRF for attribution of input.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>4. Consolidation of Feedback and Endorsement</h3>
-        <p>
-          The CRF Initiator will summarise all comments received and, in consultation with the CCP
-          Coordinator and key experts, will revise the draft accordingly.
-        </p>
-      </div>
-
-    </div> <!-- end .timeline -->
-
-    <p class="phase-summary">
-      <strong>Output of Phase 4:</strong>
-      Reviewed and collaboratively refined first draft CRF (Word document).
-    </p>
-
-  </div>
-</details>
-
-
-
-<!-- ===== PHASE 5 – Piloting and Finalisation ===== -->
-<details class="phase-accordion">
-  <summary class="phase-title">Phase 5. Piloting and Finalisation</summary>
-
-  <div class="phase-accordion-content">
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <h3>1. Drafting Collaborative Version in BRIDGE</h3>
-        <p>
-          The CRF Initiator will transfer the collaboratively refined draft CRF into BRIDGE.
-        </p>
-        <p>
-          All variables should be mapped to existing ARC variables, and any clashes with existing ARC
-          structures must be identified and listed for review.
-        </p>
-        <p>
-          Newly proposed variables must be prepared in the following format:
-          <em>variable name</em>, <em>variable definition</em>, and
-          <em>proposed section for inclusion</em>.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>2. Integration of New Variables into ARC</h3>
-        <p>
-          Newly proposed variables will be reviewed by the Data Team against the ARC Variable Inclusion
-          Rules (see below).
-        </p>
-        <p>
-          This review will determine whether each variable meets criteria for clinical relevance,
-          scientific justification, non-duplication and suitability as a raw variable, and will ensure
-          correct placement, naming conventions and coding within ARC.
-        </p>
-        <p>
-          Approved variables will be integrated into ARC, and clashes or overlaps will be resolved in
-          consultation with the Steering Committee and the ARChetype CRF Coordinator as needed.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>3. CRF Piloting in REDCap</h3>
-        <p>
-          A pilot version of the CRF will be generated using the BRIDGE data dictionary and tested in
-          REDCap (or a similar electronic data capture platform).
-        </p>
-        <p>
-          Users participating in the pilot will provide feedback on usability, clarity of questions,
-          workflow logic, branching, timing and feasibility of data entry. All feedback will be logged
-          and reviewed.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>4. Complete Final Version for Approval</h3>
-        <p>
-          Following piloting, the CRF Initiator will review and summarise pilot feedback and implement
-          necessary modifications to the CRF.
-        </p>
-        <p>
-          The final version of the CRF will then be submitted to the ISARIC ARChetype CRFs Approvals
-          Committee for review, high-level feedback and final endorsement before implementation.
-        </p>
-      </div>
-
-    </div> <!-- end .timeline -->
-
-    <p class="phase-summary">
-      <strong>Output of Phase 5:</strong> Final approved CRF.
-    </p>
-
-  </div>
-</details>
-<!-- ===== PHASE 6 – Release and Communication ===== -->
-<details class="phase-accordion">
-  <summary class="phase-title">Phase 6. Release and Communication</summary>
-
-  <div class="phase-accordion-content">
-
-    <div class="timeline">
-
-      <div class="timeline-item">
-        <h3>1. Release Final CRF</h3>
-        <p>
-          The final approved CRF will be added to BRIDGE and made available through ISARIC communication
-          channels for use by the network.
-        </p>
-        <p>
-          Documentation and accompanying guidance will be uploaded to ensure users have clear instructions
-          on implementation.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>2. Create Synthetic Dataset and Perform VERTEX Test</h3>
-        <p>
-          The Data Manager and Data Scientist will generate a synthetic dataset using ARC-aligned variable
-          structures and REDCap or other synthetic data generation tools.
-        </p>
-        <p>
-          The CRF will then be tested in VERTEX using this synthetic dataset to confirm compatibility,
-          correct variable mapping, structural integrity, and expected performance within VERTEX.
-        </p>
-      </div>
-
-      <div class="timeline-item">
-        <h3>3. Launch Response Page and Prepare for Publishing</h3>
-        <p>
-          A response page will be launched containing the CRF, documentation, and instructions for use.
-        </p>
-        <p>
-          Materials will be prepared for publishing at the ISARIC Summit or other dissemination events to
-          announce availability of the new ARChetype CRF.
-        </p>
-      </div>
-
-    </div> <!-- end .timeline -->
-
-    <p class="phase-summary">
-      <strong>Output of Phase 6:</strong>
-      ARChetype CRF released in BRIDGE, communicated to the network, and validated with proof-of-use in VERTEX.
-    </p>
-
-  </div>
-</details>
-<!-- ===== ARC Variable Inclusion (placed after Phase 6) ===== -->
-<div class="arc-wrapper">
-  <h2 class="arc-title">ARC Variable Inclusion</h2>
-
-  <div class="arc-container">
-    <div class="arc-column arc-rules">
-      <h3>Rules</h3>
-
-      <p><strong>Clinical relevance:</strong> Contributes to disease/syndrome identification, prognosis,
-        risk stratification, treatment, complications, or outcomes.</p>
-
-      <p><strong>Scientific justification:</strong> Addresses a knowledge gap, aligns with guidelines,
-        improves data quality/harmonisation, or supports patient-centred research.</p>
-
-      <p><strong>Non-duplication:</strong> No overlap with existing ARC variables. Clearly distinguished
-        from similar variables (including timing/temporal aspects).</p>
-
-      <p><strong>Not derived:</strong> Only include raw variables; derived variables can be computed later.</p>
-    </div>
-
-    <div class="arc-column arc-instructions">
-      <h3>Instructions</h3>
-
-      <p><strong>Be disease-agnostic:</strong> Phrase the variable broadly unless disease-specific detail is essential.</p>
-
-      <p><strong>Correct placement:</strong> Use the right form (Presentation, Daily, Summary, Outcome), section
-        (Demographics, Onset, Inclusion criteria, etc.) and event/time-point.</p>
-
-      <p><strong>Answer options:</strong> Follow ARC standards (e.g. “Yes / No / Unknown / Other”).
-        Reference standard lists if used.</p>
-
-      <p><strong>Logical structure:</strong> Group variables with related items, define branching logic, and use
-        appropriate organ-system groupings.</p>
-
-      <p><strong>Validation &amp; definitions:</strong> Specify ranges for numeric/date fields, units and conversions,
-        and provide clear completion guidance.</p>
-
-      <p><strong>Standard coding:</strong> Map variables/answers to clinical coding systems
-        (e.g. SNOMED CT, ATC, or others) where relevant.</p>
-    </div>
-  </div>
-</div>
-
-<!--
-            <div class="timeline">
-               //PHASE 1
-        <div class="timeline-phase">
-            <h2 class="phase-title">Phase 1. Initiation and Endorsement</h2>
-                <div class="timeline-item">
-                    <h3>1. Identify the Need</h3>
-                    <p>Any ISARIC staff or research partner may propose the development of a new archetype CRF. The justification, specific requirements, and objectives of the CRF can be proposed to the ISARIC CCP team at <a href="mailto:data@isaric.org">data@isaric.org</a>. </p>
-                </div>
-                <div class="timeline-item">
-                    <h3>2. Initial call with CCP coordinator</h3>
-                    <p>The CCP Coordinator will hold an initial call with the CRF Initiator to discuss the proposed CRF, methodology, timelines, available ISARIC tools (e.g. BRIDGE, CRF library), and the experts who may need to be involved. The Coordinator will also advise on the information required for the endorsement process. </p>
-                </div>
-                <div class="timeline-item">
-                    <h3>3. Endorsement of Action</h3>
-                    <p>Where the topic is outside of the scope of ISARIC’s activities, the CCP Coordinator will liaise with the ISARIC ARChetype CRFs Approvers Committee to obtain a decision on endorsement and progression of CRF development.
-                        They will consider: <br> (a) the public health impact of the disease/syndrome; <br> (b) existing research efforts to address the objectives proposed;<br> 
-                        (c) engagement of appropriate stakeholders; <br> 
-                        (d) ISARIC’s ability to add unique value to global evidence generation efforts through development of the CRF. 
-                    <p><i>Note:  activities of phase 2-3 below may be initiated in parallel to the endorsement process to speed up the process in the event of an active outbreak. </i></p>
-                    </p>
-                </div>
-                <p class="phase-summary">
-    <strong>Output of Phase 1:</strong> Decision to proceed (or not) with CRF development.
-</p>
-//PHASE 2
-        <div class="timeline-phase">
-            <h2 class="phase-title">Phase 2. Governance and Expert Engagement</h2>
-                <div class="timeline-item">
-    <h3>1. Roles, Responsibilities and Expert Identification</h3>
-
-    <p><strong>CRF Initiator:</strong><br>
-    Responsible for drafting and developing the CRF, conducting the literature review,
-    identifying and engaging relevant experts, and establishing a Steering Committee
-    from among the expert reviewers.</p>
-
-    <p><strong>CCP Coordinator:</strong><br>
-    Oversees the CRF creation process, ensures that timelines are met, supports
-    methodological decisions, and connects the Initiator with appropriate experts
-    and stakeholders.</p>
-
-    <p><strong>Expert Reviewers:</strong><br>
-    Subject matter experts, partners in affected regions, researchers with relevant
-    publications, clinicians with patient-management experience, data managers,
-    global health actors, and regulatory bodies who provide technical and contextual input
-    to inform the CRF.</p>
-
-    <p><strong>Steering Committee:</strong><br>
-    A subset of expert reviewers who review early drafts of the CRF, provide structured
-    feedback, and advise on variable inclusion, removal, and refinement.</p>
-<p><strong>ISARIC ARChetype CRFs Approvals Committee:</strong><br>
-    Provides final approval of the CRF and offers high-level feedback to ensure alignment
-    with ISARIC standards and broader global research priorities.</p>
-</div>
-                <div class="timeline-item">
-                    <h3>2. Review Relevant Literature and Existing CRFs</h3>
-                    <p>
-        The CRF Initiator reviews existing literature, clinical trials, guidelines, and published CRFs
-        related to the disease.
-    </p>
-    <p>
-        The Initiator may also contact expert reviewers to request CRFs they have used previously in
-        similar clinical or research contexts.
-    </p>
-    <p>
-        This evidence base informs variable selection, and the overall scope and structure of the CRF.
-    </p>
-</div>
-                <div class="timeline-item">
-                    <h3>3. WHO Consultation</h3>
-                    <p>The CCP Coordinator or their delegate will contact WHO to obtain a copy of any related WHO CRFs, then discuss how the CRF and research questions can support WHO’s 
-                        related initiatives and what parties should be involved in its development. WHO feedback will be incorporated as much as possible by iteration of the required steps above or below.</p>
-                </div>
-                <p class="phase-summary">
-    <strong>Output of Phase 2:</strong> List of expert reviewers and stakeholders and an evidence base to inform CRF design
-</p>
-
-                //PHASE 3
-        <div class="timeline-phase">
-            <h2 class="phase-title">Phase 3. Research Framing and Drafting</h2>
-                 <div class="timeline-item">
-                    <h3>1. Framing Research Questions and CRF Content</h3>
-                    <p>Working with the Steering Committee, the CRF Initiator will define the key research questions
-        to be addressed by the CRF. <br>Based on these questions, the Initiator will map the relevant
-        variables needed to capture essential epidemiological, clinical, laboratory, and outcome data.
-             </p>   
-      </div>
-                     <div class="timeline-item">
-                    <h3>2.Create First Draft CRF </h3>
-                    <p>Using ISARIC BioResearch Integrated Data Tool Generator (<a href="https://bridge.isaric.org/">  BRIDGE </a>), the Initiator will develop an initial version of the CRF that: 
-                      </p>
-    <ul>
-        <li>incorporates all mapped data points;</li>
-        <li>uses standardised variables available in the ISARIC Analysis and Research Compendium (<a href="https://github.com/ISARICResearch/ARC"> ARC</a> );</li>
-        <li>drafts new variables where no suitable ARC structures exist.</li>
-    </ul>
-    <p>
-        This first draft will form the basis for subsequent expert review and refinement.
-    </p>
-</div>
+      </details>
+      <!-- ===== PHASE 2 – Governance and Expert Engagement ===== -->
+      <details class="phase-accordion">
+        <!-- Clickable phase header -->
+        <summary class="phase-title">Phase 2. Governance and Expert Engagement</summary>
+
+        <!-- Content visible when accordion is open -->
+        <div class="phase-accordion-content">
+
+          <!-- Vertical timeline for Phase 2 -->
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <h3>1. Roles, Responsibilities and Expert Identification</h3>
+
+              <p><strong>CRF Initiator:</strong><br>
+                Responsible for drafting and developing the CRF, conducting the literature review,
+                identifying and engaging relevant experts, and establishing a Steering Committee
+                from among the expert reviewers.
+              </p>
+
+              <p><strong>CCP Coordinator:</strong><br>
+                Oversees the CRF creation process, ensures that timelines are met, supports
+                methodological decisions, and connects the Initiator with appropriate experts
+                and stakeholders.
+              </p>
+
+              <p><strong>Expert Reviewers:</strong><br>
+                Subject matter experts, partners in affected regions, researchers with relevant
+                publications, clinicians with patient-management experience, data managers,
+                global health actors, and regulatory bodies who provide technical and contextual input
+                to inform the CRF.
+              </p>
+
+              <p><strong>Steering Committee:</strong><br>
+                A subset of expert reviewers who review early drafts of the CRF, provide structured
+                feedback, and advise on variable inclusion, removal, and refinement.
+              </p>
+
+              <p><strong>ISARIC ARChetype CRFs Approvals Committee:</strong><br>
+                Provides final approval of the CRF and offers high-level feedback to ensure alignment
+                with ISARIC standards and broader global research priorities.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>2. Review Relevant Literature and Existing CRFs</h3>
+              <p>
+                The CRF Initiator reviews existing literature, clinical trials, guidelines, and published CRFs
+                related to the disease.
+              </p>
+              <p>
+                The Initiator may also contact expert reviewers to request CRFs they have used previously in
+                similar clinical or research contexts.
+              </p>
+              <p>
+                This evidence base informs variable selection, and the overall scope and structure of the CRF.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>3. WHO Consultation</h3>
+              <p>
+                The CCP Coordinator or their delegate will contact WHO to obtain a copy of any related WHO CRFs,
+                then discuss how the CRF and research questions can support WHO’s related initiatives and what
+                parties should be involved in its development. WHO feedback will be incorporated as much as
+                possible by iteration of the required steps above or below.
+              </p>
+            </div>
+
+          </div> <!-- end .timeline -->
+
+          <!-- Output of Phase 2 -->
           <p class="phase-summary">
-    <strong>Output of Phase 3:</strong> First draft of the CRF in a Word document generated from BRIDGE.
-</p>  
-                </div>
-                //PHASE 4
-        <div class="timeline-phase">
-            <h2 class="phase-title">Phase 4. Expert review</h2>
-                 <div class="timeline-item">
-                    <h3>1.Steering Committee Review of First Draft </h3>
-                    <p> The first draft CRF will be shared with the Steering Committee via a shared document.
+            <strong>Output of Phase 2:</strong>
+            List of expert reviewers and stakeholders and an evidence base to inform CRF design.
+          </p>
+
+        </div> <!-- end .phase-accordion-content -->
+      </details>
+
+
+
+      <!-- ===== PHASE 3 – Research Framing and Drafting ===== -->
+      <details class="phase-accordion">
+        <summary class="phase-title">Phase 3. Research Framing and Drafting</summary>
+
+        <div class="phase-accordion-content">
+
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <h3>1. Framing Research Questions and CRF Content</h3>
+              <p>
+                Working with the Steering Committee, the CRF Initiator will define the key research questions
+                to be addressed by the CRF.<br>
+                Based on these questions, the Initiator will map the relevant variables needed to capture
+                essential epidemiological, clinical, laboratory, and outcome data.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>2. Create First Draft CRF</h3>
+              <p>
+                Using ISARIC BioResearch Integrated Data Tool Generator
+                (<a href="https://bridge.isaric.org/">BRIDGE</a>), the Initiator will develop an initial
+                version of the CRF that:
+              </p>
+              <ul>
+                <li>incorporates all mapped data points;</li>
+                <li>uses standardised variables available in the ISARIC Analysis and Research Compendium
+                  (<a href="https://github.com/ISARICResearch/ARC">ARC</a>);</li>
+                <li>drafts new variables where no suitable ARC structures exist.</li>
+              </ul>
+              <p>
+                This first draft will form the basis for subsequent expert review and refinement.
+              </p>
+            </div>
+
+          </div> <!-- end .timeline -->
+
+          <p class="phase-summary">
+            <strong>Output of Phase 3:</strong>
+            First draft of the CRF in a Word document generated from BRIDGE.
+          </p>
+
+        </div>
+      </details>
+
+
+
+      <!-- ===== PHASE 4 – Expert Review ===== -->
+      <details class="phase-accordion">
+        <summary class="phase-title">Phase 4. Expert Review</summary>
+
+        <div class="phase-accordion-content">
+
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <h3>1. Steering Committee Review of First Draft</h3>
+              <p>
+                The first draft CRF will be shared with the Steering Committee via a shared document.
                 Comments and edits will be collected during a review period defined by the Initiator,
-                relative to the urgency of the need for the CRF.</p>
-                </div>
-                  <div class="timeline-item">
-                    <h3>2.Consider disease/syndromic relevance to CEPI  </h3>
-                    <p>If within CEPI's scope of interest, the CCP Coordinator or their delegate share a copy of the CRF to request review and the addition of any variables that are 
-                        valuable to CEPI's activities.  </p>
-                      </div>
-                      <div class="timeline-item">
-                    <h3>3.Wider Expert Community Review of Revised Draft  </h3>
-                    <p>Following incorporation of Steering Committee (and CEPI, where relevant) feedback, the revised draft CRF will be shared with the wider expert community. Expert reviewers will be invited to provide additional comments to ensure the CRF is comprehensive, feasible and aligned with current practice.  </p>
-                      </div>
-                   <div class="timeline-item">
-                    <h3>4.Consolidation of Feedback and Endorsement  </h3>
-                    <p>The CRF Initiator will summarise all comments received and, in consultation with the CCP Coordinator and key experts, will revise the draft accordingly. </p>
-                </div>
-                <p class="phase-summary">
+                relative to the urgency of the need for the CRF.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>2. Consider disease/syndromic relevance to CEPI</h3>
+              <p>
+                If within CEPI's scope of interest, the CCP Coordinator or their delegate will share a copy
+                of the CRF to request review and the addition of any variables that are valuable to CEPI's
+                activities.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>3. Wider Expert Community Review of Revised Draft</h3>
+              <p>
+                Following incorporation of Steering Committee (and CEPI, where relevant) feedback, the revised
+                draft CRF will be shared with the wider expert community. Expert reviewers will be invited to
+                provide additional comments to ensure the CRF is comprehensive, feasible and aligned with
+                current practice. All reviewers will be invited to add their names to the reviewer list on the CRF for
+                attribution of input.All reviewers will be invited to add their names to the reviewer list on the CRF
+                for attribution of input.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>4. Consolidation of Feedback and Endorsement</h3>
+              <p>
+                The CRF Initiator will summarise all comments received and, in consultation with the CCP
+                Coordinator and key experts, will revise the draft accordingly.
+              </p>
+            </div>
+
+          </div> <!-- end .timeline -->
+
+          <p class="phase-summary">
             <strong>Output of Phase 4:</strong>
             Reviewed and collaboratively refined first draft CRF (Word document).
-        </p>
+          </p>
 
-    </div>
-                //PHASE 5
-        <div class="timeline-phase">
-            <h2 class="phase-title">Phase 5. Piloting and Finalisation</h2>
-                  <div class="timeline-item">
-                    <h3>1.	Drafting Collaborative version in BRIDGE  </h3>
-                    <p>
-      The CRF Initiator will transfer the collaboratively refined draft CRF into BRIDGE.
-    </p>
-    <p>
-      All variables should be mapped to existing ARC variables, and any clashes with existing ARC
-      structures must be identified and listed for review.
-    </p>
-    <p>
-      Newly proposed variables must be prepared in the following format:
-      <em>variable name</em>, <em>variable definition</em>, and <em>proposed section for inclusion</em>.
-    </p>
-  </div>
-                    <div class="timeline-item">
-                    <h3>2.	Integration of New Variables into ARC  </h3>
-                    <p> Newly proposed variables will be reviewed by the Data Team against the ARC Variable Inclusion
-      Rules (see below). </p>
-    <p>
-      This review will determine whether each variable meets criteria for clinical relevance,
-      scientific justification, non-duplication and suitability as a raw variable, and will ensure
-      correct placement, naming conventions and coding within ARC.
-    </p>
-    <p>
-      Approved variables will be integrated into ARC, and clashes or overlaps will be resolved in
-      consultation with the Steering Committee and the ARChetype CRF Coordinator as needed.
-    </p>
-  </div>
-                 <div class="timeline-item">
-                    <h3>3.	CRF Piloting in REDCap </h3>
-                    A pilot version of the CRF will be generated using the BRIDGE data dictionary and tested in
-      REDCap (or a similar electronic data capture platform).</p>
-    <p>
-      Users participating in the pilot will provide feedback on usability, clarity of questions,
-      workflow logic, branching, timing and feasibility of data entry. All feedback will be logged
-      and reviewed.
-    </p>
-  </div>
-  <div class="timeline-item">
-    <h3>4. Complete Final Version for Approval</h3>
-    <p>
-      Following piloting, the CRF Initiator will review and summarise pilot feedback and implement
-      necessary modifications to the CRF.
-    </p>
-    <p>
-      The final version of the CRF will then be submitted to the ISARIC ARChetype CRFs Approvals
-      Committee for review, high-level feedback and final endorsement before implementation.
-    </p>
-  </div>
-
-  <p class="phase-summary">
-    <strong>Output of Phase 5:</strong> Final approved CRF.
-  </p>
-
-</div>
-<div class="arc-wrapper">
-
-  <h2 class="arc-title">ARC Variable Inclusion</h2>
-<div class="arc-container">
-  <div class="arc-column arc-rules">
-    <h3>Rules</h3>
-
-    <p><strong>Clinical relevance:</strong> Contributes to disease/syndrome identification, prognosis,
-      risk stratification, treatment, complications, or outcomes.</p>
-
-    <p><strong>Scientific justification:</strong> Addresses a knowledge gap, aligns with guidelines,
-      improves data quality/harmonisation, or supports patient-centred research.</p>
-
-    <p><strong>Non-duplication:</strong> No overlap with existing ARC variables. Clearly distinguished
-      from similar variables (including timing/temporal aspects).</p>
-
-    <p><strong>Not derived:</strong> Only include raw variables; derived variables can be computed later.</p>
-  </div>
-
-  <div class="arc-column arc-instructions">
-    <h3>Instructions</h3>
-
-    <p><strong>Be disease-agnostic:</strong> Phrase the variable broadly unless disease-specific detail is essential.</p>
-
-    <p><strong>Correct placement:</strong> Use the right form (Presentation, Daily, Summary, Outcome), section
-      (Demographics, Onset, Inclusion criteria, etc.) and event/time-point.</p>
-
-    <p><strong>Answer options:</strong> Follow ARC standards (e.g. “Yes / No / Unknown / Other”).
-      Reference standard lists if used.</p>
-
-    <p><strong>Logical structure:</strong> Group variables with related items, define branching logic, and use
-      appropriate organ-system groupings.</p>
-
-    <p><strong>Validation &amp; definitions:</strong> Specify ranges for numeric/date fields, units and conversions,
-      and provide clear completion guidance.</p>
-
-    <p><strong>Standard coding:</strong> Map variables/answers to clinical coding systems
-      (e.g. SNOMED CT, ATC, or others) where relevant.</p>
-  </div>
-</div>
-<h2 class="phase-title">Phase 6. Release and Communication</h2>
-
-  <div class="timeline-item">
-    <h3>1. Release Final CRF</h3>
-    <p>
-      The final approved CRF will be added to BRIDGE and made available through ISARIC communication
-      channels for use by the network.
-    </p>
-    <p>
-      Documentation and accompanying guidance will be uploaded to ensure users have clear instructions
-      on implementation.
-    </p>
-  </div>
-
-  <div class="timeline-item">
-    <h3>2. Create Synthetic Dataset and Perform VERTEX Test</h3>
-    <p>
-      The Data Manager and Data Scientist will generate a synthetic dataset using ARC-aligned variable
-      structures and REDCap or other synthetic data generation tools.
-    </p>
-    <p>
-      The CRF will then be tested in VERTEX using this synthetic dataset to confirm compatibility,
-      correct variable mapping, structural integrity, and expected performance within VERTEX.
-    </p>
-  </div>
-
-  <div class="timeline-item">
-    <h3>3. Launch Response Page and Prepare for Publishing</h3>
-    <p>
-      A response page will be launched containing the CRF, documentation, and instructions for use.
-    </p>
-    <p>
-      Materials will be prepared for publishing at the ISARIC Summit or other dissemination events to
-      announce availability of the new ARChetype CRF.
-    </p>
-  </div>
-
-  <p class="phase-summary">
-    <strong>Output of Phase 6:</strong>
-    ARChetype CRF released in BRIDGE, communicated to the network, and validated with proof-of-use in VERTEX.
-  </p>
-
-</div>
--->
+        </div>
+      </details>
 
 
+
+      <!-- ===== PHASE 5 – Piloting and Finalisation ===== -->
+      <details class="phase-accordion">
+        <summary class="phase-title">Phase 5. Piloting and Finalisation</summary>
+
+        <div class="phase-accordion-content">
+
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <h3>1. Drafting Collaborative Version in BRIDGE</h3>
+              <p>
+                The CRF Initiator will transfer the collaboratively refined draft CRF into BRIDGE.
+              </p>
+              <p>
+                All variables should be mapped to existing ARC variables, and any clashes with existing ARC
+                structures must be identified and listed for review.
+              </p>
+              <p>
+                Newly proposed variables must be prepared in the following format:
+                <em>variable name</em>, <em>variable definition</em>, and
+                <em>proposed section for inclusion</em>.
+              </p>
             </div>
-        </section>
-        <p><i> Last update:  <span id="demo"></span> </i></p>
-    </div>
 
-    <div class="footer">
-        <p style="color:White"> If you are interested in using or developing an ARCHetype CRF,  please contact <a href="mailto:data@isaric.org">data@isaric.org</a></p>
-    </div>
-    
- <script>
-     document.querySelectorAll("a[href]").forEach(a => {
-       if (!a.href.startsWith("mailto:") &&
-           !a.href.startsWith("javascript:") &&
-           !a.href.includes('#')) {
-         a.setAttribute("target", "_blank");
-         a.setAttribute("rel", "noopener");
-       }
-     });
-   </script>   
+            <div class="timeline-item">
+              <h3>2. Integration of New Variables into ARC</h3>
+              <p>
+                Newly proposed variables will be reviewed by the Data Team against the ARC Variable Inclusion
+                Rules (see below).
+              </p>
+              <p>
+                This review will determine whether each variable meets criteria for clinical relevance,
+                scientific justification, non-duplication and suitability as a raw variable, and will ensure
+                correct placement, naming conventions and coding within ARC.
+              </p>
+              <p>
+                Approved variables will be integrated into ARC, and clashes or overlaps will be resolved in
+                consultation with the Steering Committee and the ARChetype CRF Coordinator as needed.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>3. CRF Piloting in REDCap</h3>
+              <p>
+                A pilot version of the CRF will be generated using the BRIDGE data dictionary and tested in
+                REDCap (or a similar electronic data capture platform).
+              </p>
+              <p>
+                Users participating in the pilot will provide feedback on usability, clarity of questions,
+                workflow logic, branching, timing and feasibility of data entry. All feedback will be logged
+                and reviewed.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>4. Complete Final Version for Approval</h3>
+              <p>
+                Following piloting, the CRF Initiator will review and summarise pilot feedback and implement
+                necessary modifications to the CRF.
+              </p>
+              <p>
+                The final version of the CRF will then be submitted to the ISARIC ARChetype CRFs Approvals
+                Committee for review, high-level feedback and final endorsement before implementation.
+              </p>
+            </div>
+
+          </div> <!-- end .timeline -->
+
+          <p class="phase-summary">
+            <strong>Output of Phase 5:</strong> Final approved CRF.
+          </p>
+
+        </div>
+      </details>
+      <!-- ===== PHASE 6 – Release and Communication ===== -->
+      <details class="phase-accordion">
+        <summary class="phase-title">Phase 6. Release and Communication</summary>
+
+        <div class="phase-accordion-content">
+
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <h3>1. Release Final CRF</h3>
+              <p>
+                The final approved CRF will be added to BRIDGE and made available through ISARIC communication
+                channels for use by the network.
+              </p>
+              <p>
+                Documentation and accompanying guidance will be uploaded to ensure users have clear instructions
+                on implementation.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>2. Create Synthetic Dataset and Perform VERTEX Test</h3>
+              <p>
+                The Data Manager and Data Scientist will generate a synthetic dataset using ARC-aligned variable
+                structures and REDCap or other synthetic data generation tools.
+              </p>
+              <p>
+                The CRF will then be tested in VERTEX using this synthetic dataset to confirm compatibility,
+                correct variable mapping, structural integrity, and expected performance within VERTEX.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>3. Launch Response Page and Prepare for Publishing</h3>
+              <p>
+                A response page will be launched containing the CRF, documentation, and instructions for use.
+              </p>
+              <p>
+                Materials will be prepared for publishing at the ISARIC Summit or other dissemination events to
+                announce availability of the new ARChetype CRF.
+              </p>
+            </div>
+
+          </div> <!-- end .timeline -->
+
+          <p class="phase-summary">
+            <strong>Output of Phase 6:</strong>
+            ARChetype CRF released in BRIDGE, communicated to the network, and validated with proof-of-use in VERTEX.
+          </p>
+
+        </div>
+      </details>
+      <!-- ===== ARC Variable Inclusion (placed after Phase 6) ===== -->
+      <div class="arc-wrapper">
+        <h2 class="arc-title">ARC Variable Inclusion</h2>
+
+        <div class="arc-container">
+          <div class="arc-column arc-rules">
+            <h3>Rules</h3>
+
+            <p><strong>Clinical relevance:</strong> Contributes to disease/syndrome identification, prognosis,
+              risk stratification, treatment, complications, or outcomes.</p>
+
+            <p><strong>Scientific justification:</strong> Addresses a knowledge gap, aligns with guidelines,
+              improves data quality/harmonisation, or supports patient-centred research.</p>
+
+            <p><strong>Non-duplication:</strong> No overlap with existing ARC variables. Clearly distinguished
+              from similar variables (including timing/temporal aspects).</p>
+
+            <p><strong>Not derived:</strong> Only include raw variables; derived variables can be computed later.</p>
+          </div>
+
+          <div class="arc-column arc-instructions">
+            <h3>Instructions</h3>
+
+            <p><strong>Be disease-agnostic:</strong> Phrase the variable broadly unless disease-specific detail is
+              essential.</p>
+
+            <p><strong>Correct placement:</strong> Use the right form (Presentation, Daily, Summary, Outcome), section
+              (Demographics, Onset, Inclusion criteria, etc.) and event/time-point.</p>
+
+            <p><strong>Answer options:</strong> Follow ARC standards (e.g. “Yes / No / Unknown / Other”).
+              Reference standard lists if used.</p>
+
+            <p><strong>Logical structure:</strong> Group variables with related items, define branching logic, and use
+              appropriate organ-system groupings.</p>
+
+            <p><strong>Validation &amp; definitions:</strong> Specify ranges for numeric/date fields, units and
+              conversions,
+              and provide clear completion guidance.</p>
+
+            <p><strong>Standard coding:</strong> Map variables/answers to clinical coding systems
+              (e.g. SNOMED CT, ATC, or others) where relevant.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
+  <p><i> Last update: <span id="demo"></span> </i></p>
+  <!-- </div> -->
+
+  <div class="footer">
+    <p style="color:White"> If you are interested in using or developing an ARCHetype CRF, please contact <a
+        href="mailto:data@isaric.org">data@isaric.org</a></p>
+  </div>
+
+  <script>
+    document.querySelectorAll("a[href]").forEach(a => {
+      if (!a.href.startsWith("mailto:") &&
+        !a.href.startsWith("javascript:") &&
+        !a.href.includes('#')) {
+        a.setAttribute("target", "_blank");
+        a.setAttribute("rel", "noopener");
+      }
+    });
+  </script>
 </body>
 </html>
